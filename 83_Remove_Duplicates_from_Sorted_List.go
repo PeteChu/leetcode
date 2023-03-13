@@ -19,7 +19,7 @@ type ListNode struct {
 func deleteDuplicates(head *ListNode) *ListNode {
 	currentNode := head
 
-	for true {
+	for {
 		if currentNode == nil {
 			break
 		}
@@ -28,7 +28,7 @@ func deleteDuplicates(head *ListNode) *ListNode {
 			currentVal := currentNode.Val
 			var nextNode *ListNode
 			nextNode = currentNode.Next
-			for true {
+			for {
 				if currentVal != nextNode.Val {
 					currentNode.Next = nextNode
 					break
@@ -66,7 +66,7 @@ func generateNodeList(vals []int) *ListNode {
 }
 
 func printNodeList(head *ListNode) {
-	for true {
+	for {
 		fmt.Println(head.Val)
 		head = head.Next
 		if head == nil {
