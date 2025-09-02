@@ -12,17 +12,14 @@ import "fmt"
  * }
  */
 type ListNode struct {
-	Val  int
 	Next *ListNode
+	Val  int
 }
 
 func deleteDuplicates(head *ListNode) *ListNode {
 	currentNode := head
 
-	for {
-		if currentNode == nil {
-			break
-		}
+	for currentNode != nil {
 
 		if currentNode.Next != nil {
 			currentVal := currentNode.Val
@@ -47,7 +44,6 @@ func deleteDuplicates(head *ListNode) *ListNode {
 }
 
 func generateNodeList(vals []int) *ListNode {
-
 	head := &ListNode{
 		Val: vals[0],
 	}

@@ -3,10 +3,10 @@
 def isValid(s: str) -> bool:
     if len(s) % 2 != 0:
         return False
-    ob = ['(', '{', '[']
-    cb = [')', '}', ']']
+    ob = ["(", "{", "["]
+    cb = [")", "}", "]"]
     stack = []
-    
+
     for i in s:
         if i in ob:
             stack.append(i)
